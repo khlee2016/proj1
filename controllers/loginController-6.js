@@ -12,7 +12,7 @@ const jwtSecret = process.env.JWT_SECRET;
 //@desc Register Page
 //@route GET /register
 const getRegister = (req, res) => {
-  res.render("register");
+  res.render("register-2");
 };
 
 // @desc Register user
@@ -37,7 +37,7 @@ const registerUser = asyncHandler(async (req, res) => {
 //@desc Get login page
 //@route GET /
 const getLogin = (req, res) => {
-  res.render("home");
+  res.render("home-2");
 };
 
 //@desc Login user

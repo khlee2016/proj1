@@ -5,13 +5,13 @@ const Contact = require("../models/contactModel");
 // @route GET /contacts
 const getAllContacts = asyncHandler(async (req, res) => {
   const contacts = await Contact.find();
-  res.render("index", { contacts: contacts });
+  res.render("index-4", { contacts: contacts });
 });
 
 // @desc View add contact form
 // @route GET /contacts/add
 const addContactForm = asyncHandler((req, res) => {
-  res.render("add");
+  res.render("add-2");
 });
 
 // @desc Create a contact
@@ -31,7 +31,7 @@ const createContact = asyncHandler(async (req, res) => {
 // @route GET /contacts/:id
 const getContact = asyncHandler(async (req, res) => {
   const contact = await Contact.findById(req.params.id);
-  res.render("update", { contact: contact });
+  res.render("update-3", { contact: contact });
 });
 
 // @desc Update contact
@@ -50,7 +50,7 @@ const updateContact = asyncHandler(async (req, res) => {
 // @desc Delete contact
 // @route DELETE /contacts/:id
 const deleteContact = asyncHandler(async (req, res) => {
-  await Contact.findByIdAndDelete(req.query.id);
+  await Contact.findByIdAndDelete(req.params.id);
   res.redirect("back");
 });
 

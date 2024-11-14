@@ -9,7 +9,7 @@ const {
   updateContact,
   deleteContact,
   addContactForm,
-} = require("../controllers/contactController");
+} = require("../controllers/contactController-15");
 
 router.use(cookieParser());
 
